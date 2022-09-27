@@ -39,13 +39,6 @@ print(
             filter(es_letra, "4$$E&95KPfjT$%TJ7#6T2%tcnS#3$^"))))
 ```
 
->Verificamos si es letra
-
-``` py
-def es_letra(letra):
-    return re.match("[A-Za-z]",letra)
-```
-
 >De la misma manera para contar los números
 
 ``` py
