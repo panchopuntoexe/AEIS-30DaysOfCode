@@ -14,7 +14,7 @@
 
 ### 🖥️ *Código:*
 
-<p align="center">Mediante un bucle se itera entre el rango de días suministrado y con weekday() se verificar que día de la semana es. Finalmente, timedelta() se usado para transformar al formato de HH:MM:SS.
+<p align="center">Mediante un bucle se itera entre el rango de días suministrado y con weekday() se verificar que día de la semana es. Finalmente, timedelta() es usado para transformar al formato de HH:MM:SS.
 </p>
 
 >Se importa la librería de datetime
