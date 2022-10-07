@@ -8,22 +8,51 @@
 ### 🎲 *Codificado en:* Python <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="20" height="20"/>&nbsp;
 
 
-<h2 align="center">Día 8: Lista enlazada</h2>
-<p align="center" >🧑‍💻👩‍💻 Implementa una función o bloque que nos permita crear una lista enlazada, es decir, nodos, enlaces, etc. No hagas uso de las funciones propias del lenguaje que estés implementado para el reto.<br>
-Implementa los métodos:<br>
-push: ingresa un elemento al final de la lista.<br>
-pop: retira un elemento del final de la lista.<br>
-shift: remueve un elemento del inicio de la lista<br>
-unshift: inserta un elemento al inicio de la lista.<br>
+<h2 align="center">Día 9: Lista enlazada</h2>
+<p align="center" >🧑‍💻👩‍💻 Crea la siguiente lista enlazada:
+1 -> 54 -> 20 -> 13 -> 43 ->18 -> 11-> 53
+🧑‍💻👩‍💻 Muestra la lista anterior, para esto puedes construir un bloque o función que reciba una lista enlazada y devuelva lo anteriormente indicado (suma puntos si lo imprimes de manera creativa, clara o divertida).
+🧑‍💻👩‍💻 Con los métodos shift y push inserta los valores 68, 95, 3, 7 y 37, aleatoriamente, en la lista y muéstrala por pantalla.
+🧑‍💻👩‍💻 Crea un bloque o función que tome una lista y nos devuelva dos listas, una con los números pares y otra con los impares.
 </p>
 
 ### 🖥️ *Código:*
 
-<p align="center">Dos clases asociadas de un Nodo y una lista de Nodos. El nodo tiene como dato una variable sin un tipo específico por lo que se puede trabajar con varios.
+<p align="center">Cree una función de partición de listas según el dato del nodo con un bucle while.
 </p>
 
+>Función que crea una lista de pares impares dada una lista enlazada
 
->Clases de Nodo y Lista
+``` py
+def partir_lista(lista: Lista):
+    lista_de_pares = Lista()
+    lista_de_impares = Lista()
+    if not lista.esta_vacia():
+        nodo_actual = lista.inicio
+        while nodo_actual.get_enlace() != None:
+            if (nodo_actual.get_dato() % 2 == 0):
+                lista_de_pares.push(nodo_actual.get_dato())
+            else:
+                lista_de_impares.push(nodo_actual.get_dato())
+            nodo_actual = nodo_actual.get_enlace()
+        if (nodo_actual.get_dato() % 2 == 0):
+                lista_de_pares.push(nodo_actual.get_dato())
+        else:
+            lista_de_impares.push(nodo_actual.get_dato())
+    return lista_de_pares, lista_de_impares
+```
+
+>Ingreso de elementos a la lista
+
+```py
+lista = Lista()
+# 1 -> 54 -> 20 -> 13 -> 43 ->18 -> 11-> 53
+for elemento in [1, 54, 20, 13, 43, 18, 11, 53]:
+    lista.push(elemento)
+print(lista.__str__())
+```
+
+>Clases de Nodo y Lista anteriores (SIN CAMBIOS)
 
 ``` py
 class Nodo:

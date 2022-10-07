@@ -68,3 +68,33 @@ class Lista:
                 nodo_actual = nodo_actual.get_enlace()
                 cadena_de_retorno += nodo_actual.__str__() + " -> "
             return cadena_de_retorno
+
+
+def partir_lista(lista: Lista):
+    lista_de_pares = Lista()
+    lista_de_impares = Lista()
+    if not lista.esta_vacia():
+        nodo_actual = lista.inicio
+        while nodo_actual.get_enlace() != None:
+            if (nodo_actual.get_dato() % 2 == 0):
+                lista_de_pares.push(nodo_actual.get_dato())
+            else:
+                lista_de_impares.push(nodo_actual.get_dato())
+            nodo_actual = nodo_actual.get_enlace()
+        if (nodo_actual.get_dato() % 2 == 0):
+                lista_de_pares.push(nodo_actual.get_dato())
+        else:
+            lista_de_impares.push(nodo_actual.get_dato())
+    return lista_de_pares, lista_de_impares
+
+
+lista = Lista()
+# 1 -> 54 -> 20 -> 13 -> 43 ->18 -> 11-> 53
+for elemento in [1, 54, 20, 13, 43, 18, 11, 53]:
+    lista.push(elemento)
+print(lista.__str__())
+
+
+lista_de_pares, lista_de_impares = partir_lista(lista)
+print(lista_de_pares.__str__())
+print(lista_de_impares.__str__())
