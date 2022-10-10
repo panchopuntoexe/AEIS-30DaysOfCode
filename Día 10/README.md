@@ -16,13 +16,13 @@ Opcional: si manejas git sabrás que estos comandos al ejecutarlos muestran una 
 
 ### 🖥️ *Código:*
 
-<p align="center">Se implemento una lista enlazada de n dimensiones. Se reemplazó el nodo simple, por un nodo compuesto llamado objetogit. Este tiene dos enlaces: uno a otro nodo historial que registra los cambios y otro a una rama si es que la tiene. En cambio, la lista es ahora llamada SistemaGit con una cabeza absoluta, el primer objetogit, y una cabeza relativa que cambia según la rama en la que nos encontremos actualmente. Esta clase tiene funciones para: añadir un nuevo commit al final del historial, crear una rama al último nodo del historial clonando a este, cambiar de rama con la variable lista relativa, ver el status del último commit, revertir el último commit y ver commit HEAD de la rama haciendo un símil con el comando git show HEAD. 
-1. git commit
-2. git branch
-3. git revert
-4. git status
-5. git checkout
-6. git show HEAD
+<p align="center">Se implemento una lista enlazada de n dimensiones. Se reemplazó el nodo simple, por un nodo compuesto llamado objetogit. Este tiene dos enlaces: uno a otro nodo historial que registra los cambios y otro a una rama si es que la tiene. En cambio, la lista es ahora llamada SistemaGit con una cabeza absoluta, el primer objetogit, y una cabeza relativa que cambia según la rama en la que nos encontremos actualmente. Esta clase tiene funciones para: añadir un nuevo commit al final del historial, crear una rama al último nodo del historial clonando a este, cambiar de rama con la variable lista relativa, ver el status del último commit, revertir el último commit y ver commit HEAD de la rama haciendo un símil con el comando git show HEAD. <br>
+1. git commit<br>
+2. git branch<br>
+3. git revert<br>
+4. git status<br>
+5. git checkout<br>
+6. git show HEAD<br>
 </p>
 
 >ObjetoGit que reemplaza al nudo en la lista, esta clase tiene dos referencias: a un nodo historial o a una rama
